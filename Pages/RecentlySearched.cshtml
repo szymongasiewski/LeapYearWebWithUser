@@ -1,0 +1,19 @@
+﻿@page
+@model LeapYearWebWithUser.Pages.RecentlySearchedModel
+@{
+    ViewData["Title"] = "Recently searched";
+}
+<h1 class="display-4">Ostatnio szukane.</h1>
+<form method = "post">
+    <ul class="list-group list-group-flush">
+        @foreach (var item in Model.RecentlySearched)
+        {
+            <li class="list-group-items">
+                <span>
+                    @item.Date @item.FullName @item.Year - rok @item.IsLeapYear.
+                </span>
+                <input class="btn-primary btn-danger" style="float: right" type="submit" asp-page-handler="DeleteRecord" asp-route-RecordId="@item.Id" value="Usuń" />
+            </li>
+        }
+    </ul>
+</form>
