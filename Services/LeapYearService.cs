@@ -31,7 +31,8 @@ namespace LeapYearWebWithUser.Services
                     FullName = leapYear.Name + " " + leapYear.Surname,
                     Date = leapYear.Date,
                     Year = leapYear.Year,
-                    IsLeapYear = leapYear.IsLeapYear(leapYear.Year) + "przestępny"
+                    IsLeapYear = leapYear.IsLeapYear(leapYear.Year) + "przestępny",
+                    User = leapYear.User
                 };
 
                 result.LeapYears.Add(lYVM);
@@ -55,7 +56,8 @@ namespace LeapYearWebWithUser.Services
                         FullName = leapYear.Name + " " + leapYear.Surname,
                         Date = leapYear.Date,
                         Year = leapYear.Year,
-                        IsLeapYear = leapYear.IsLeapYear(leapYear.Year) + "przestępny"
+                        IsLeapYear = leapYear.IsLeapYear(leapYear.Year) + "przestępny",
+                        User = leapYear.User
                     };
 
                     result.LeapYears.Add(lYVM);

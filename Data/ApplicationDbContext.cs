@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using LeapYearWebWithUser.Models;
 
 namespace LeapYearWebWithUser.Data
 {
@@ -10,7 +9,5 @@ namespace LeapYearWebWithUser.Data
             : base(options)
         {
         }
-
-        public DbSet<LeapYear> LeapYear { get; set; }
     }
 }

@@ -37,6 +37,7 @@ namespace LeapYearWebWithUser.Pages
             if (ModelState.IsValid)
             {
                 LeapYear.Date = DateTime.Now;
+                LeapYear.User = User.Identity.Name;
 
                 Arr = new string[4];
                 Arr[0] = LeapYear.Name;

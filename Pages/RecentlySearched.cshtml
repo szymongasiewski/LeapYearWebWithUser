@@ -12,7 +12,10 @@
                 <span>
                     @item.Date @item.FullName @item.Year - rok @item.IsLeapYear.
                 </span>
-                <input class="btn-primary btn-danger" style="float: right" type="submit" asp-page-handler="DeleteRecord" asp-route-RecordId="@item.Id" value="Usuń" />
+                @if(item.User == User.Identity.Name)
+                {
+                    <input class="btn-primary btn-danger" style="float: right" type="submit" asp-page-handler="DeleteRecord" asp-route-RecordId="@item.Id" value="Usuń" />
+                }
             </li>
         }
     </ul>

@@ -26,6 +26,8 @@ namespace LeapYearWebWithUser.Models
         [Required(ErrorMessage = "Pole jest obowiązkowe")]
         public string Surname { get; set; }
 
+        public string? User { get; set; }
+
         public string IsLeapYear(int? year)
         {
             if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)

@@ -6,9 +6,9 @@ namespace LeapYearWebWithUser.Repositories
 {
     public class LeapYearRepository : ILeapYearRepository
     {
-        private readonly ApplicationDbContext _context;
+        private readonly LeapYearContext _context;
 
-        public LeapYearRepository(ApplicationDbContext context)
+        public LeapYearRepository(LeapYearContext context)
         {
             _context = context;
         }

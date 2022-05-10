@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LeapYearWebWithUser.Data.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(LeapYearContext))]
     [Migration("20220508220525_m1")]
     partial class m1
     {
